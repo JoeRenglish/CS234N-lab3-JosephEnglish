@@ -22,7 +22,9 @@ namespace MMABooksDB
 {
     public class CustomerDB : DBBase, IReadDB, IWriteDB
     {
-        
+        public CustomerDB() : base() { }
+        public CustomerDB(DBConnection cn) : base(cn) { }
+
         public IBaseProps Create(IBaseProps p)
         {
             int rowsAffected = 0;
@@ -194,16 +196,9 @@ namespace MMABooksDB
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("custId", DBDbType.Int32);
             command.Parameters.Add("name_p", DBDbType.VarChar);
-            command.Parameters.Add("address_p", DBDbType.VarChar);
-            command.Parameters.Add("city_p", DBDbType.VarChar);
-            command.Parameters.Add("state_p", DBDbType.VarChar);
-            command.Parameters.Add("zipcode_p", DBDbType.VarChar);
             command.Parameters.Add("conCurrId", DBDbType.Int32);
+            command.Parameters["custId"].Value = props.CustomerId;
             command.Parameters["name_p"].Value = props.Name;
-            command.Parameters["address_p"].Value = props.Address;
-            command.Parameters["city_p"].Value = props.City;
-            command.Parameters["state_p"].Value = props.State;
-            command.Parameters["zipcode_p"].Value = props.ZipCode;
             command.Parameters["conCurrId"].Value = props.ConcurrencyID;
 
             try

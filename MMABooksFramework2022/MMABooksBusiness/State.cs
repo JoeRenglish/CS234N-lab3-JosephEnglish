@@ -17,6 +17,8 @@ namespace MMABooksBusiness
         //  application programmer.  It doesn't have to match the database.
         public string Abbreviation
         {
+
+
             get
             {
                 return ((StateProps)mProps).Code;
