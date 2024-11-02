@@ -63,7 +63,7 @@ namespace MMABooksProps
 
         public void SetState(DBDataReader dr)
         {
-            this.CustomerId = (Int32)dr["CustomerId"];
+            this.CustomerId = (int)dr["CustomerId"];
             this.Name = (string)dr["Name"];
             this.Address = (string)dr["Address"];
             this.City = (string)dr["City"];

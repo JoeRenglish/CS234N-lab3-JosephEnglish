@@ -14,7 +14,7 @@ namespace MMABooksBusiness
         {
         }
 
-        public Customer(string key)
+        public Customer(int key)
             : base(key)
         {
         }
@@ -44,14 +44,14 @@ namespace MMABooksBusiness
                 {
                     if (value.Trim().Length >= 1 && value.Trim().Length <= 100)
                     {
-                        mRules.RuleBroken("Abbreviation", false);
+                        mRules.RuleBroken("Name", false);
                         ((CustomerProps)mProps).Name = value;
                         mIsDirty = true;
                     }
 
                     else
                     {
-                        throw new ArgumentOutOfRangeException("Abbreviation must be no more than 100 characters long.");
+                        throw new ArgumentOutOfRangeException("Name must be no more than 100 characters long.");
                     }
                 }
             }
@@ -69,14 +69,14 @@ namespace MMABooksBusiness
                 {
                     if (value.Trim().Length >= 1 && value.Trim().Length <= 100)
                     {
-                        mRules.RuleBroken("Abbreviation", false);
+                        mRules.RuleBroken("Address", false);
                         ((CustomerProps)mProps).Address = value;
                         mIsDirty = true;
                     }
 
                     else
                     {
-                        throw new ArgumentOutOfRangeException("Abbreviation must be no more than 100 characters long.");
+                        throw new ArgumentOutOfRangeException("Address must be no more than 100 characters long.");
                     }
                 }
             }
@@ -94,14 +94,14 @@ namespace MMABooksBusiness
                 {
                     if (value.Trim().Length >= 1 && value.Trim().Length <= 100)
                     {
-                        mRules.RuleBroken("Abbreviation", false);
+                        mRules.RuleBroken("City", false);
                         ((CustomerProps)mProps).City = value;
                         mIsDirty = true;
                     }
 
                     else
                     {
-                        throw new ArgumentOutOfRangeException("Abbreviation must be no more than 100 characters long.");
+                        throw new ArgumentOutOfRangeException("City must be no more than 100 characters long.");
                     }
                 }
             }
@@ -119,14 +119,14 @@ namespace MMABooksBusiness
                 {
                     if (value.Trim().Length >= 1 && value.Trim().Length <= 100)
                     {
-                        mRules.RuleBroken("Abbreviation", false);
+                        mRules.RuleBroken("State", false);
                         ((CustomerProps)mProps).State = value;
                         mIsDirty = true;
                     }
 
                     else
                     {
-                        throw new ArgumentOutOfRangeException("Abbreviation must be no more than 100 characters long.");
+                        throw new ArgumentOutOfRangeException("State must be no more than 100 characters long.");
                     }
                 }
             }
@@ -144,14 +144,14 @@ namespace MMABooksBusiness
                 {
                     if (value.Trim().Length >= 1 && value.Trim().Length <= 100)
                     {
-                        mRules.RuleBroken("Abbreviation", false);
+                        mRules.RuleBroken("ZipCode", false);
                         ((CustomerProps)mProps).ZipCode = value;
                         mIsDirty = true;
                     }
 
                     else
                     {
-                        throw new ArgumentOutOfRangeException("Abbreviation must be no more than 100 characters long.");
+                        throw new ArgumentOutOfRangeException("Zipcode must be no more than 100 characters long.");
                     }
                 }
             }
