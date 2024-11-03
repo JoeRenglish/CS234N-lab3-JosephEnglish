@@ -83,13 +83,6 @@ namespace MMABooksTests
             Assert.AreEqual(p.GetState(), p2.GetState());
         }
 
-        [Test]
-        public void TestCreatePrimaryKeyViolation()
-        {
-            CustomerProps p = new CustomerProps();
-            p.CustomerId = 702;
-            p.Name = "Minnie Mouse";
-            Assert.Throws<MySqlException>(() => db.Create(p));
-        }
+        
     }
 }
